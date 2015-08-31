@@ -1,0 +1,24 @@
+name: InSanoTimer
+main: com.notoriouspark.pl.insanotimer.InSanoTimer
+version: 1.0
+author: NotoriousPark
+
+commands:
+  starttimer:
+    description: Starts a timer
+    usage: /<command>
+    permission: InSanoTimer.basic
+    permission-message: You don't have <permission>
+  stoptimer:
+    description: Stops a timer
+    usage: /<command>
+    permission: InSanoTimer.basic
+    permission-message: You don't have <permission>
+  uhcinfo:
+    description: Displays timer
+    usage: /<command>
+
+permissions:
+  InSanoTimer.basic:
+    description: Allows use of the commands in the plugin
+    default: op
