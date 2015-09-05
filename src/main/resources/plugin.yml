@@ -6,7 +6,6 @@ author: NotoriousPark
 commands:
   starttimer:
     description: Starts a timer
-    usage: /<command>
     permission: InSanoTimer.basic
     permission-message: You don't have <permission>
   stoptimer:

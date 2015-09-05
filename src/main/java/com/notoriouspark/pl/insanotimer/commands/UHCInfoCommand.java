@@ -22,10 +22,11 @@ public class UHCInfoCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (insanotimer.getRunning()) {
             openUHCInfo((Player) sender);
+            return true;
         } else {
             sender.sendMessage(insanotimer.getPrefix() + "No timer is running!");
+            return true;
         }
-        return false;
     }
 
     public void openUHCInfo(Player player) {

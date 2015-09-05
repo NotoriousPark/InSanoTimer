@@ -5,6 +5,7 @@ import com.notoriouspark.pl.insanotimer.commands.TimerCommand;
 import com.notoriouspark.pl.insanotimer.commands.UHCInfoCommand;
 import com.notoriouspark.pl.insanotimer.listeners.InventoryClickListener;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -17,6 +18,8 @@ public class InSanoTimer extends JavaPlugin {
     private int meetup;
 
     public void onEnable() {
+
+        Bukkit.broadcastMessage("HI");
 
         this.prefix = ChatColor.getByChar(config.getString("Bracket ID")) + "[ " + ChatColor.getByChar(config.getString("Server ID")) + "InSano" + ChatColor.getByChar(config.getString("Bracket ID")) + "] ";
 

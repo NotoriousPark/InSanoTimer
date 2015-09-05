@@ -16,9 +16,10 @@ public class TimerCommand implements CommandExecutor {
     }
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        Bukkit.broadcastMessage("hi!");
+        Bukkit.broadcastMessage("Running");
+
         if (!insanotimer.getRunning()) {
-            if (args == null) {
+            if (args.length == 0) {
                 insanotimer.setRunning(true);
 
                 insanotimer.setPvP(insanotimer.getConfig().getInt("Default PvP"));
@@ -37,7 +38,7 @@ public class TimerCommand implements CommandExecutor {
                     return true;
                 } else {
                     sender.sendMessage(insanotimer.getPrefix() + "Invalid Syntax.");
-                    return false;
+                    return true;
                 }
             } else if (args.length == 2) {
                 if (args[0].matches("\\d+") && args[1].matches("\\d+")) {
@@ -50,15 +51,15 @@ public class TimerCommand implements CommandExecutor {
                     return true;
                 } else {
                     sender.sendMessage(insanotimer.getPrefix() + "Invalid Syntax.");
-                    return false;
+                    return true;
                 }
             } else {
                 sender.sendMessage(insanotimer.getPrefix() + "Invalid Syntax.");
-                return false;
+                return true;
             }
         } else {
             sender.sendMessage(insanotimer.getPrefix() + "Timer is already running!");
-            return false;
+            return true;
         }
     }
 
